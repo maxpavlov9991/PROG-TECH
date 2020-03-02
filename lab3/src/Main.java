@@ -12,18 +12,15 @@ public class Main {
         item1.price = 500.5f;
         item1.analog = item2;
 
-
         item2.ID = 2;
         item2.name = "Second";
         item2.price = 1000.5f;
         item2.analog = item3;
 
-
         item3.ID = 3;
         item3.name = "Third";
         item3.price = 1500.5f;
         item3.analog = item1;
-
 
         foodItem.ID = 5;
         foodItem.name = "foodItem";
@@ -42,7 +39,6 @@ public class Main {
         techicalItem.printAll();
         foodItem.printAll();
 
-
         FoodItem foodItem2 = new FoodItem();
         FoodItem foodItem3 = new FoodItem();
         System.out.println(foodItem2.equals(foodItem3));
@@ -51,7 +47,5 @@ public class Main {
         System.out.println(foodItem3.equals(foodItemClone));
 
         System.out.println(item1.toString());
-
-        
     }
 }
