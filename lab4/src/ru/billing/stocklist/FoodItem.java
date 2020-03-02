@@ -1,12 +1,14 @@
+package ru.billing.stocklist;
+
 public class FoodItem extends GenericItem {
 
-    public java.util.Date dateofIncome;
-    public short expires;
+    private java.util.Date dateofIncome;
+    private short expires;
 
     public FoodItem(String name, float price, FoodItem analog, java.util.Date date, short expires) {
-        this.name = name;
-        this.price = price;
-        this.analog = analog;
+        setName(name);
+        setPrice(price);
+        setAnalog(analog);
         this.dateofIncome = date;
         this.expires = expires;
     }
@@ -24,13 +26,9 @@ public class FoodItem extends GenericItem {
     public FoodItem() {
     }
 
-
-
-
-
     @Override
     void printAll() {
-        System.out.println("ID: "+ID+" , name: "+name+" , price: "+price+" , category: "+category+" , dateofIncome: "+dateofIncome+" , expires: "+expires);
+        System.out.println("ID: "+getID()+" , name: "+getName()+" , price: "+getPrice()+" , category: "+getCategory()+" , dateofIncome: "+dateofIncome+" , expires: "+expires);
     } 
 
     @Override
@@ -50,6 +48,22 @@ public class FoodItem extends GenericItem {
     @Override
     public String toString() {
         return "Object FoodItem";
+    }
+
+    public java.util.Date getDateofIncome() {
+        return dateofIncome;
+    }
+
+    public void setDateofIncome(java.util.Date dateofIncome) {
+        this.dateofIncome = dateofIncome;
+    }
+
+    public short getExpires() {
+        return expires;
+    }
+
+    public void setExpires(short expires) {
+        this.expires = expires;
     }
 
 }

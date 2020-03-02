@@ -1,10 +1,12 @@
-class GenericItem {
+package ru.billing.stocklist;
+
+public class GenericItem {
   
-    public int ID;
-    public String name;
-    public float price;
-    public GenericItem analog;
-    public Category category = Category.GENERAL;
+    private int ID;
+    private String name;
+    private float price;
+    private GenericItem analog;
+    private Category category = Category.GENERAL;
 
     static int currentID = 0;
 
@@ -52,5 +54,53 @@ class GenericItem {
     public String toString() {
         return "Object GenericItem";
     }
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public float getPrice() {
+		return price;
+	}
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+	public GenericItem getAnalog() {
+		return analog;
+	}
+
+	public void setAnalog(GenericItem analog) {
+		this.analog = analog;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	public static int getCurrentID() {
+		return currentID;
+	}
+
+	public static void setCurrentID(int currentID) {
+		GenericItem.currentID = currentID;
+	}
 
 }

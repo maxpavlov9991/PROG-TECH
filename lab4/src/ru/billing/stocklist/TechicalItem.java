@@ -1,10 +1,12 @@
+package ru.billing.stocklist;
+
 public class TechicalItem extends GenericItem {
 
-    public short warrantyTime;
+    private short warrantyTime;
 
     @Override
     void printAll() {
-        System.out.println("ID: "+ID+" , name: "+name+" , price: "+price+" , category: "+category+" , warrantyTime: "+warrantyTime);
+        System.out.println("ID: "+getID()+" , name: "+getName()+" , price: "+getPrice()+" , category: "+getCategory()+" , warrantyTime: "+warrantyTime);
     }
 
     @Override
@@ -24,6 +26,14 @@ public class TechicalItem extends GenericItem {
     @Override
     public String toString() {
         return "Object TechicalItem";
+    }
+
+    public short getWarrantyTime() {
+        return warrantyTime;
+    }
+
+    public void setWarrantyTime(short warrantyTime) {
+        this.warrantyTime = warrantyTime;
     }
 
 }
