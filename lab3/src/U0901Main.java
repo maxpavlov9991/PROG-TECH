@@ -13,14 +13,5 @@ public class U0901Main {
 
         System.out.println(insWorkArrayInt.sum());
         System.out.println(insWorkArrayFloat.sum());
-
-        String line = "Конфеты 'Маска';45;120";
-
-        String item_fld[] = line.split(";");
-
-        FoodItem foodItem = new FoodItem(item_fld[0], Float.parseFloat(item_fld[1]), Short.parseShort(item_fld[2]));
-
-        foodItem.printAll();
-
     }
 }
